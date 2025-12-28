@@ -1,6 +1,6 @@
 # CyberMD
 
-A flexible tool for converting various document formats into clean Markdown, supporting both OCR-based extraction (for PDFs and images) and direct conversion (for DOCX, PPTX, XLSX). The project includes a Streamlit web interface for interactive use and a CLI script for batch processing.
+CyberMD (aka. Cyber Markdown) is a flexible tool for converting various document formats into clean Markdown, supporting both OCR-based extraction (for PDFs and images) and direct conversion (for DOCX, PPTX, XLSX). The project includes a Streamlit web interface for interactive use and a CLI script for batch processing.
 
 ## Features
 
@@ -20,11 +20,10 @@ A flexible tool for converting various document formats into clean Markdown, sup
 
 ## Quick Start
 
-### 1. Installation
+### 1. Installation (via `uv`)
 
 ```bash
-pip install streamlit python-dotenv
-# Ensure OCRProcessor and MarkItDownProcessor dependencies are installed
+uv sync --python 3.12
 ```
 
 Clone or set up the project with the following structure:
@@ -45,7 +44,7 @@ project-root/
 Launch the Streamlit interface:
 
 ```bash
-streamlit run main.py
+uv run streamlit run main.py
 ```
 
 Upload a document, click "Start Processing", and download the resulting Markdown.
@@ -55,7 +54,7 @@ Upload a document, click "Start Processing", and download the resulting Markdown
 Place files in the `input/` directory and run:
 
 ```bash
-python cli.py
+uv run cli.py
 ```
 
 Processed Markdown files will appear in the `output/` directory.
